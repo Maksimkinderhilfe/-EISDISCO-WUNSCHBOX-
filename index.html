@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eisdisco Wunschbox</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main class="wrap">
+<header><div class="logo">⛸️</div><div><h1>Eisdisco Wunschbox</h1><p>Willkommen! 🎵</p></div></header>
+
+<section class="card" id="start">
+<h2>Wer bist du?</h2>
+<div class="roleButtons">
+<button id="visitorBtn">🎵 BESUCHER</button>
+<button id="djBtn">🖥️ DJ</button>
+</div>
+</section>
+
+<section class="card" id="visitor" hidden>
+<h2>🎶 Song wünschen</h2>
+<form id="searchForm">
+<label>Songtitel<input id="title" required maxlength="100" placeholder="z. B. Titanium"></label>
+<label>Interpret<input id="artist" required maxlength="100" placeholder="z. B. David Guetta"></label>
+<button>🔎 Spotify durchsuchen</button>
+</form>
+<div id="results"></div><p id="msg"></p>
+<div class="row"><h2>🔥 Wunschliste</h2><button class="secondary" onclick="loadWishes()">↻</button></div>
+<div id="publicWishes"></div>
+<button class="secondary back">← Zurück</button>
+</section>
+
+<section class="card" id="djLogin" hidden>
+<h2>🔐 DJ-Bereich</h2>
+<p class="muted">Nur für den DJ.</p>
+<input id="djPassword" type="password" placeholder="DJ-Passwort">
+<button id="loginBtn">🔓 Einloggen</button>
+<p id="loginMsg"></p>
+<button class="secondary back">← Zurück</button>
+</section>
+
+<section class="card admin" id="adminPanel" hidden>
+<div class="row"><h2>🖥️ DJ-Wunschbox</h2><button class="secondary" id="logoutBtn">Abmelden</button></div>
+<p>Hier siehst du die Wünsche live.</p>
+<div id="adminWishes"></div>
+</section>
+</main><script src="app.js"></script></body></html>
